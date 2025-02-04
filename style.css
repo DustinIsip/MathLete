@@ -416,3 +416,9 @@ div form.register button{
         padding: 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .wrapper{
+        width: 100vw;
+    }
+}
