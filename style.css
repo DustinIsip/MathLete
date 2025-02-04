@@ -1,0 +1,418 @@
+:root{
+    --background-color: #1B1E22;
+    --hover: #282b347c;
+    --card-color: #282B34 ;
+    --outline-color: #D9C3A1;
+    --text-color: #8392B0;
+    --warning: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: var(--text-color);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+}
+
+.wrapper .left-side button:hover, 
+div form.register button:hover,
+.button-container .button-container-item button:hover,
+#control button:hover{
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: var(--outline-color);
+    color: var(--background-color);
+    a{color: var(--background-color);}
+}
+
+/*
+
+    Index.html css:
+
+*/
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--card-color);
+}
+
+.wrapper .left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 25px 25px;
+
+    -webkit-border-top-right-radius: 25px;
+    -webkit-border-bottom-right-radius: 25px;
+    -moz-border-radius-topright: 25px;
+    -moz-border-radius-bottomright: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background-color: var(--background-color);
+}
+
+.wrapper .left-side h1, h1 span{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.wrapper .left-side h1 span{
+    color: var(--outline-color);
+}
+
+.wrapper .left-side button{
+    border: none;
+    border-radius: 15px;
+
+    width: 100%;
+    margin: 5px 0px;
+    color: var(--outline-color);
+    background-color: var(--card-color);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .left-side button a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+.wrapper .right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/*
+
+    Register.html css:
+
+*/
+
+#body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+#register-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 450px;
+    margin: 10px 10px;
+    width: clamp(250px, 350px, 350px);
+
+    box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+
+    border-radius: 10px;
+    padding: 20px 20px;
+    border: var(--outline-color) solid 3px;
+    border-style: outset;
+    background-color: var(--card-color);
+    transition: all 0.3s ease-out;
+}
+
+div #heading{
+    color: var(--outline-color);
+    margin: 15px 10px 20px;
+    font-weight: bold;
+}
+
+div form{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 80%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+div form .form-item{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+
+.form-item.text .field{
+    width: inherit;
+    padding: 5px 5px;
+
+    border: none;
+    border-bottom: var(--outline-color) solid 1px;
+    background-color: transparent;
+
+    transition: all 0.3s ease-out;
+}
+
+.empty{
+    border-bottom: var(--warning) solid 1px !important;
+    transition: all 0.3s ease-out;
+}
+
+.form-item.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+
+    input{
+        cursor: pointer;
+    }
+}
+
+div form.register input:focus{
+    outline: none;
+}
+
+div form.register a{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div form.register a:hover, #play-body a:hover{
+    text-decoration: underline;
+}
+
+div form.register button{
+    border: none;
+    margin-top: auto;
+    padding: 10px 10px;
+    border-radius: 25px;
+
+    color: var(--outline-color);
+    background-color: var(--background-color);
+
+    transition: all 0.3s ease-out;
+}
+
+/*
+
+    Selection.html css:
+
+*/
+
+#selection-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+#selection{
+    height: 80%;
+    width: 540px;
+    padding: 35px;
+    border-radius: 30px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 48px 14px rgba(0,0,0,0.75);
+    border-style: outset;
+    border: var(--outline-color) solid 3px;
+    background-color: var(--card-color);
+    transition: all 0.3s ease-out;
+}
+
+#selection-container #selection h2{
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    color: var(--outline-color);
+}
+
+.button-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50%;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    background-color:#1b1e2262;
+}
+
+.button-container .button-container-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 100%;
+}
+
+.button-container .button-container-item button, #control button, #play-again{
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: var(--outline-color);
+    background-color: var(--background-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container .button-container-item button{
+    font-size: 32px;
+    width: 100%;
+    height: 100%;
+}
+
+.button-container .button-container-item button:disabled{
+    filter: brightness(50%);
+    pointer-events: none;
+}
+
+.button-container .button-container-item button:hover  + p{
+    color: var(--card-color);
+}
+
+.button-container .button-container-item p{
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-5px);
+    
+    font-size: 12px;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+#play-body a{
+    font-size: 12px;
+}
+
+#control{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 5px;
+}
+
+#control button{
+    width: 100px;
+    height: 20px;
+    a{
+        color: var(--outline-color);
+    }
+}
+
+/*
+
+    Play.html css
+
+*/
+
+#play-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+#play-body{
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: outset;
+    border: var(--outline-color) solid 3px;
+    background-color: var(--card-color);
+    transition: all 0.3s ease-out;
+
+    h2{
+        font-weight: bold;
+        color: var(--outline-color);
+    }
+
+    h3{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#stats{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+#stats p{
+    font-size: 14px;
+    span{
+        margin-left: 5px;
+    }
+}
+
+#countdown{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+#play-again{
+    width: 100px;
+    margin: 2px;
+}
+
+@media (max-width: 860px) {
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper .left-side{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 544px){
+    #selection{
+        padding: 10px;
+    }
+}
