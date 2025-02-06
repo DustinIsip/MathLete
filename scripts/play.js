@@ -49,6 +49,7 @@ function updateButtons(first_digit, second_digit){
     let correctAnswer = eval(`${first_digit} ${operation} ${second_digit}`)
     correctAnswer = (mode === "division") ? Math.round(correctAnswer * 100) / 100 : correctAnswer
     document.querySelectorAll(".button").forEach((button, i) =>{
+        button.style.backgroundColor = "#1B1E22";
         button.classList.remove("correct")
         let randomNumber = 
             (mode === "multiplication") ? generateRandomNumber(number_range*10)
