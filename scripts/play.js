@@ -116,8 +116,12 @@ function startTimer(){
 function stopGame(){
     play = false;
     clearInterval(timer);
+    document.getElementById("question").textContent = "Game Over";
     document.getElementById("play-again").classList.remove("hidden");
-    document.querySelectorAll(".button").forEach((button) => button.disabled = true);
+    document.querySelectorAll(".button").forEach((button) => {
+        button.disabled = true;
+        button.style.backgroundColor = "#1B1E22";
+    });
     document.getElementById("play-body").style.borderColor = "red";
 }
 
