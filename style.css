@@ -34,7 +34,7 @@ div form.register button:hover,
 #control button:hover{
     font-size: 14px;
     border-radius: 5px;
-    background-color: var(--outline-color);
+    background-color: var(--outline-color) !important;
     color: var(--background-color);
     a{color: var(--background-color);}
 }
