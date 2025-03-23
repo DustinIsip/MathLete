@@ -103,13 +103,18 @@ div form.register button:hover,
 
 .wrapper .right-side{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    height: 100%;
+    height: auto;
     width: 100%;
-    border: none;
 }
+
+.wrapper .right-side .video{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 /*
 
@@ -390,6 +395,10 @@ div form.register button{
 
 #countdown{
     color: red;
+}
+
+.button-container-item button:disabled{
+    background-color: #1B1E22;
 }
 
 .hidden{
